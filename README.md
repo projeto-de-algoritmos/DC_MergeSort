@@ -1,31 +1,28 @@
-# Trabalho4_Dividir_e_Conquistar
+# Merge Sort
 
-**Número da Lista**: X<br>
-**Conteúdo da Disciplina**: XXXXXXXXXX<br>
+**Número da Lista**: 4 <br>
+**Conteúdo da Disciplina**: Divisão e Conquista <br>
 
 ## Alunos
+
 |Matrícula | Aluno |
 | -- | -- |
-| xx/xxxxxx  |  xxxx xxxx xxxxx |
-| xx/xxxxxx  |  xxxx xxxx xxxxx |
+| 16/0006210 | Francisco Heronildo |
+| 16/0010195 | João Vítor Morandi |
 
 ## Sobre 
-Descreva os objetivos do seu projeto e como ele funciona. 
+Implemetação do  Merge Sort onde é verificado o número de inversões que acontece no mesmo
 
 ## Screenshots
-Adicione 3 ou mais screenshots do projeto em funcionamento.
+
+![Imgur](https://i.imgur.com/TCdi6Pq.png)
 
 ## Instalação 
-**Linguagem**: xxxxxx<br>
-**Framework**: (caso exista)<br>
-Descreva os pré-requisitos para rodar o seu projeto e os comandos necessários.
+**Linguagem**: Python 3 <br>
 
-## Uso 
-Explique como usar seu projeto caso haja algum passo a passo após o comando de execução.
-
-## Outros 
-Quaisquer outras informações sobre seu projeto podem ser descritas abaixo.
-
-
-
-
+Clone o Repositório:
+`$ git clone https://github.com/projeto-de-algoritmos/DC_MergeSort.git` </br>
+Acesse o diretório:
+`$ cd DC_MergeSort` </br>
+Execute:
+`$ python3 count_inv` </br>
