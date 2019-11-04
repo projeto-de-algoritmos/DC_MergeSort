@@ -25,7 +25,7 @@ def mergeSort(arr):
                 i+=1
             else: 
                 arr[k] = R[j]
-                INVERSIONS_SORT = INVERSIONS_SORT + (len(L) + 1 - j);
+                INVERSIONS_SORT = INVERSIONS_SORT + (mid + 1 - j);
                 j+=1
             k+=1
 
@@ -47,11 +47,12 @@ def printList(arr):
 def bruteCount(masterArray):
     global INVERSIONS_BRUTE
     i=0
-    while(i<len(masterArray)):
+    while(i<len(masterArray)-1):
         j = i + 1
         while(j < len(masterArray)):
             if(masterArray[i] > masterArray[j]):
                 INVERSIONS_BRUTE += 1
+            j+=1
         i+=1
 
 
@@ -67,7 +68,7 @@ if(size < 20):
         print(masterArray)
 
 inicio1 = time.time()
-# bruteCount(masterArray)
+bruteCount(masterArray)
 fim1 = time.time()
 
 inicio2 = time.time()
