@@ -1,4 +1,4 @@
-from random import randint
+import random
 import time
 
 
@@ -62,7 +62,7 @@ tempArray = []
 
 if(size < 1000000):
     for i in range(size):
-       masterArray[i] = randint(0,1000)
+       masterArray.append(random.randint(0,1000))
        continue
 
 if(size < 20):
