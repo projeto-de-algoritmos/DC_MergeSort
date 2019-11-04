@@ -1,34 +1,46 @@
+import array as arr
 import random
 import time
-
 
 INVERSIONS_SORT = 0
 INVERSIONS_BRUTE = 0
 
 
+
 def mergeArray(start, split, end, masterArray, tempArray):
+
     global INVERSIONS_SORT
     leftCount = start
     rightCount = split+1
+    tempCount = start
 
     while((leftCount <= split) and (rightCount <= end)):
         print('leftCount: ', leftCount)
         print('rightCount: ', rightCount)
+        print('tempCount: ', tempCount)
         print('\n')
-        if(masterArray[leftCount] < masterArray[rightCount]):
-            tempArray.append(masterArray[leftCount])
+
+        if(masterArray[leftCount] <= masterArray[rightCount]):
+            tempArray[tempCount] = masterArray[leftCount]
             leftCount += 1
+            tempCount += 1
+            
         else:
-            tempArray.append(masterArray[rightCount])
+            tempArray[tempCount] = masterArray[rightCount]
             INVERSIONS_SORT += (split + 1 - leftCount)
             rightCount +=1
-    
-    while(rightCount < end):
-            tempArray.append(masterArray[rightCount])
-            rightCount +=1
-    while(leftCount < split):
-            tempArray.append(masterArray[leftCount])
-            leftCount +=1
+            tempCount +=1
+    i = rightCount
+    j = leftCount
+    while(i < end):
+            tempArray[tempCount] = masterArray[i]
+            tempCount +=1
+            i +=1
+
+    while(j < split):
+            tempArray[tempCount] = masterArray[j]
+            j +=1
+            tempCount +=1
 
     print('tempArray: ',tempArray)
 
@@ -44,6 +56,7 @@ def sortArray(start, end, masterArray, tempArray):
         sortArray(split + 1, end, masterArray, tempArray)
         mergeArray(start, split, end, masterArray, tempArray)
         print(masterArray)
+
 
 def bruteCount(masterArray):
     global INVERSIONS_BRUTE
@@ -74,7 +87,7 @@ fim1 = time.time()
 
 inicio2 = time.time()
 print('size: ',size)
-sortArray(0, size - 1, masterArray, tempArray)
+sortArray(0, size-1, masterArray, tempArray)
 fim2 = time.time()
 
 print('\n')
