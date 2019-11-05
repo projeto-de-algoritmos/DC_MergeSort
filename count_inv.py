@@ -21,7 +21,7 @@ def mergeSort(arr):
   
         i = j = k = 0
 
-        # copia dados para as matrizes temporárias L e R  
+        # copia dados para as matrizes temporarias L e R  
         while i < len(L) and j < len(R): 
             if L[i] < R[j]: 
                 arr[k] = L[i] 
@@ -49,7 +49,7 @@ def printList(arr):
         print(arr[i],end=" ") 
     print()
 
-# funcao que conta o numero de inversões por força bruta
+# funcao que conta o numero de inversoes por forca bruta
 def bruteCount(masterArray):
     global INVERSIONS_BRUTE
     i=0
